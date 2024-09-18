@@ -8,13 +8,9 @@ Tools: React Native, Expo, NativeWind, JavaScript
 
 A minimalist meditation app to help users relax, focus, and practice mindfulness through guided meditation and affirmations.
 
----
-
 ### 📚 **Overview**
 
 **Mind-Wave** is a meditation app that provides a serene user experience through guided meditations and positive affirmations. It leverages modern technologies like **React Native**, **Expo**, and **NativeWind** for fast, cross-platform mobile development. The app allows users to navigate between meditation lists and play calming audio while ensuring smooth performance and responsiveness across all devices.
-
----
 
 ### 🛠️ **Tech Stack**
 
@@ -23,8 +19,6 @@ A minimalist meditation app to help users relax, focus, and practice mindfulness
 - **NativeWind**: Utility-first CSS framework for styling React Native apps, inspired by Tailwind.
 - **JavaScript**: Core logic and behavior.
 - **TypeScript**: Strongly typed development, adding type safety to the app's logic.
-
----
 
 ### 🔋 **Features**
 
@@ -55,15 +49,11 @@ A minimalist meditation app to help users relax, focus, and practice mindfulness
 - The app is optimized for **smooth performance** and offers a consistent experience across a wide range of devices, from small to large screens.
 - Using **NativeWind**, the layout adapts seamlessly, maintaining visual consistency across different screen sizes and orientations.
 
----
-
 ### 📈 **Future Enhancements**
 
 - **Offline Mode**: Allow users to download and listen to meditation sessions offline.
 - **Daily Reminders**: Implement push notifications to remind users to meditate every day.
 - **User Progress Tracking**: Show users their meditation streaks and achievements for motivation.
-
----
 
 ### 📝 **Conclusion**
 
