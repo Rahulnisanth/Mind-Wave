@@ -1,5 +1,6 @@
 import React from "react";
-import { TouchableOpacity, Text } from "react-native";
+import { TouchableOpacity } from "react-native";
+import { Text } from "react-native";
 
 const CustomButton = ({
   title,
@@ -13,7 +14,7 @@ const CustomButton = ({
       onPress={onPress}
       className={`bg-white rounded-xl min-h-[62px] justify-center items-center ${buttonStyles}`}
     >
-      <StyledText className={`font-semibold text-lg ${textStyles}`}>{title}</Text>
+      <Text className={`font-semibold text-lg ${textStyles}`}>{title}</Text>
     </TouchableOpacity>
   );
 };
