@@ -15,7 +15,7 @@ const NatureMeditate = () => {
   return (
     <View className="h-full flex-1 bg-[#202124]">
       <SafeAreaView className="px-5 py-12">
-        <View className="mb-3 border-b border-gray-600 pb-2">
+        <View className="mb-3">
           <Text className="text-3xl font-semibold text-white">Welcome</Text>
           <Text className="text-lg text-white">
             Start your meditation practice today
