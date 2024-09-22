@@ -77,7 +77,7 @@ export const AFFIRMATION_GALLERY = [
     ],
   },
   {
-    title: "Self-Belief",
+    title: "Self Belief",
     data: [
       {
         id: 13,

@@ -11,7 +11,7 @@ const TabsLayout = () => {
         tabBarStyle: {
           backgroundColor: "#202124",
           borderTopWidth: 0,
-          height: 60,
+          height: 50,
           paddingBottom: 10,
         },
         tabBarActiveTintColor: "#ffffff",
@@ -25,7 +25,7 @@ const TabsLayout = () => {
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons
               name="flower-tulip"
-              size={28}
+              size={26}
               color={color}
             />
           ),
@@ -36,7 +36,7 @@ const TabsLayout = () => {
         options={{
           tabBarShowLabel: false,
           tabBarIcon: ({ color }) => (
-            <Ionicons name="book-sharp" size={28} color={color} />
+            <Ionicons name="book-sharp" size={26} color={color} />
           ),
         }}
       />

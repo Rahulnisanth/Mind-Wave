@@ -14,14 +14,14 @@ export default function HomeScreen() {
         resizeMode="cover"
         className="flex-1"
       >
-        <AppGradient colors={["rgba(0,0,0,0.4)", "rgba(0, 0, 0, 0.8)"]}>
+        <AppGradient colors={["rgba(0,0,0,0.5)", "rgba(0, 0, 0, 0.9)"]}>
           <SafeAreaView className="flex-1 justify-center items-center px-3 py-12">
             <SafeAreaView className="flex-1 mx-5 my-12 justify-between">
               <View>
-                <Text className="text-center text-white text-4xl font-extrabold">
+                <Text className="text-white text-center text-5xl font-extrabold tracking-widest">
                   Mind Wave
                 </Text>
-                <Text className="text-center mt-3 text-white text-regular text-2xl font-semibold">
+                <Text className="mt-4 text-white text-center text-2xl font-semibold opacity-80">
                   Simplifying the process of meditation
                 </Text>
               </View>
