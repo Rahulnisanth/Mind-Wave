@@ -1,6 +1,6 @@
-import images from "@/constants/affirmation-images";
+import images from "./Affirmation-Images";
 
-const AFFIRMATION_GALLERY = [
+export const AFFIRMATION_GALLERY = [
   {
     title: "Positivity",
     data: [
@@ -177,5 +177,3 @@ const AFFIRMATION_GALLERY = [
     ],
   },
 ];
-
-export default AFFIRMATION_GALLERY;

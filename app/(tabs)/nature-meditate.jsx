@@ -23,7 +23,7 @@ const NatureMeditate = () => {
             Start your meditation practice today
           </Text>
         </View>
-        <View className="mb-12">
+        <View className="mt-2 mb-12">
           <FlatList
             data={MEDITATION_DATA}
             className="mb-20"
