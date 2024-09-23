@@ -10,26 +10,27 @@ import { StatusBar } from "expo-status-bar";
 import { MEDITATION_DATA } from "@/constants/Meditation-Data";
 import MeditationImages from "../../constants/Meditation-Images";
 import AppGradient from "../../components/AppGradient";
+import { router } from "expo-router";
 
 const NatureMeditate = () => {
   return (
     <View className="h-full flex-1 bg-[#202124]">
-      <SafeAreaView className="px-5 py-12">
-        <View className="mb-3">
+      <SafeAreaView className="px-5 py-5">
+        <View className="mt-7 mb-3">
           <Text className="text-3xl font-semibold text-white">Welcome</Text>
           <Text className="text-lg text-white">
             Start your meditation practice today
           </Text>
         </View>
-        <View className="mb-12">
+        <View className="mb-10">
           <FlatList
             data={MEDITATION_DATA}
-            className="mb-20"
+            className="mb-36"
             keyExtractor={(item) => item.id.toString()}
             showsVerticalScrollIndicator={false}
             renderItem={({ item }) => (
               <Pressable
-                onPress={() => console.log("pressed")}
+                onPress={() => router.push(`/meditate/${item.id}`)}
                 className="h-48 my-3 rounded-md overflow-hidden"
               >
                 <ImageBackground

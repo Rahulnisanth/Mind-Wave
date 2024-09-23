@@ -11,7 +11,8 @@ const TabsLayout = () => {
         tabBarStyle: {
           backgroundColor: "#202124",
           borderTopWidth: 0,
-          height: 50,
+          height: 60,
+          paddingVertical: 10,
           paddingBottom: 10,
         },
         tabBarActiveTintColor: "#ffffff",
@@ -21,7 +22,7 @@ const TabsLayout = () => {
       <Tabs.Screen
         name="nature-meditate"
         options={{
-          tabBarShowLabel: false,
+          tabBarLabel: "Meditation",
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons
               name="flower-tulip"
@@ -31,12 +32,13 @@ const TabsLayout = () => {
           ),
         }}
       />
+
       <Tabs.Screen
         name="affirmations"
         options={{
-          tabBarShowLabel: false,
+          tabBarLabel: "Affirmations",
           tabBarIcon: ({ color }) => (
-            <Ionicons name="book-sharp" size={26} color={color} />
+            <Ionicons name="book" size={26} color={color} />
           ),
         }}
       />

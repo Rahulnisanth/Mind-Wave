@@ -1,7 +1,7 @@
 import { View, Text, ScrollView } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import { AFFIRMATION_GALLERY } from "../../constants/Affirmation-Gallery";
-import GuidedAffirmationsGallery from "../../components/GuidedAffirmationsGallery";
+import { AFFIRMATION_GALLERY } from "../../../constants/Affirmation-Gallery";
+import GuidedAffirmationsGallery from "../../../components/GuidedAffirmationsGallery";
 
 const Affirmations = () => {
   return (
