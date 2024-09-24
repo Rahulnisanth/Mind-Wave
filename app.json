@@ -5,7 +5,7 @@
     "description": "A minimalist meditation app to help users relax, focus, and practice mindfulness through guided meditation and affirmations.",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/app_icon.png",
+    "icon": "./assets/app__icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
@@ -14,12 +14,14 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "mindwave.app"
     },
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "mindwave.app"
     },
     "web": {
       "bundler": "metro",
@@ -28,6 +30,18 @@
     "plugins": ["expo-router", "expo-font"],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "c73e4cc6-d119-46b6-a020-949faab034d6"
+      }
+    },
+    "owner": "rahulnisanth",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/c73e4cc6-d119-46b6-a020-949faab034d6"
     }
   }
 }
