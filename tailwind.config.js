@@ -10,6 +10,8 @@ module.exports = {
     extend: {
       fontFamily: {
         rmono: ["Roboto-Mono", "sans-serif"],
+        rmonto: ["Montserrat-Regular"],
+        rmontb: ["Montserrat-Bold"],
       },
     },
   },

@@ -17,8 +17,8 @@ const NatureMeditate = () => {
     <View className="h-full flex-1 bg-[#202124]">
       <SafeAreaView className="px-5 py-5">
         <View className="mt-7 mb-3">
-          <Text className="text-3xl font-semibold text-white">Welcome</Text>
-          <Text className="text-lg text-white">
+          <Text className="text-3xl font-rmontb text-white">Welcome</Text>
+          <Text className="text-lg font-rmonto text-white">
             Start your meditation practice today
           </Text>
         </View>
@@ -43,7 +43,7 @@ const NatureMeditate = () => {
                     className="flex-1 justify-center items-center"
                   >
                     <View className="flex-1 justify-center items-center">
-                      <Text className="text-3xl text-center font-bold text-white">
+                      <Text className="text-3xl text-center font-rmontb text-white">
                         {item.title}
                       </Text>
                     </View>

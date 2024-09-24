@@ -7,7 +7,7 @@ const Affirmations = () => {
   return (
     <View className="h-full flex-1 bg-[#202124]">
       <ScrollView className="px-5 py-12" showsVerticalScrollIndicator={false}>
-        <Text className="text-3xl font-semibold text-white">
+        <Text className="text-3xl font-rmontb text-white">
           Change your beliefs with affirmations
         </Text>
         <View className="pb-12">

@@ -17,17 +17,17 @@ export default function HomeScreen() {
       >
         <AppGradient colors={["rgba(0,0,0,0.5)", "rgba(0, 0, 0, 0.9)"]}>
           <SafeAreaView className="flex-1 justify-center items-center px-3 py-12">
-            <SafeAreaView className="flex-1 mx-5 my-12 justify-between">
+            <SafeAreaView className="flex-1 mx-5 pt-5 my-12 justify-between">
               <View className="flex-grow items-center">
-                <Text className="text-white text-center text-5xl font-extrabold tracking-widest">
+                <Text className="text-white font-rmontb text-center text-5xl tracking-widest">
                   Mind Wave
                 </Text>
-                <Text className="mt-4 text-white text-center text-2xl font-semibold opacity-80">
+                <Text className="text-white font-rmonto text-center text-xl opacity-80">
                   Simplifying the process of meditation
                 </Text>
               </View>
 
-              <View className="flex-1 justify-center items-center">
+              <View className="flex-1 justify-center items-center mb-5">
                 <Image
                   source={MeditationLogo}
                   resizeMode="cover"
@@ -35,7 +35,7 @@ export default function HomeScreen() {
                 />
               </View>
 
-              <View className="mb-10">
+              <View>
                 <CustomButton
                   onPress={() => router.push("/nature-meditate")}
                   title="Get Started"

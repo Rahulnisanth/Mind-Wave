@@ -6,7 +6,7 @@ const GuidedAffirmationsGallery = ({ title, previews }) => {
   return (
     <View className="my-5">
       <View className="mb-4 border-b border-gray-600 pb-2">
-        <Text className="text-xl font-semibold text-white">{title}</Text>
+        <Text className="text-xl font-rmontb text-white">{title}</Text>
       </View>
       <View className="space-y-2">
         <FlatList

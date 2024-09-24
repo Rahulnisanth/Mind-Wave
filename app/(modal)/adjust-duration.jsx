@@ -27,8 +27,8 @@ const AdjustDuration = () => {
         </Pressable>
         {/* Duration Options */}
         <View className="mt-48 justify-center">
-          <Text className="text-3xl text-center mb-6 text-white font-extrabold">
-            Adjust your meditating duration here
+          <Text className="text-3xl text-center mt-6 mb-6 text-white font-rmontb">
+            Adjust your meditating duration
           </Text>
           <View className="mb-3 mx-5">
             <CustomButton

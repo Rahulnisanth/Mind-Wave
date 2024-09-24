@@ -69,7 +69,7 @@ const AffirmationsPractice = () => {
                 {sentences?.map((sentence) => (
                   <Text
                     key={sentence}
-                    className="text-white mb-12 text-2xl leading-8 tracking-wide text-center font-bold"
+                    className="text-white font-rmontb mb-12 text-2xl leading-8 tracking-wide text-center"
                   >
                     {sentence}
                   </Text>

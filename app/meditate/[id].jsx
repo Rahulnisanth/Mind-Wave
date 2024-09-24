@@ -34,8 +34,14 @@ const MeditatePractice = () => {
   }, [secondsRemaining, meditating]);
 
   useEffect(() => {
-    return () => audioSound?.unloadAsync();
+    return () => {
+      audioSound?.unloadAsync();
+    };
   }, [audioSound]);
+
+  useEffect(() => {
+    return () => setSecondsRemaining(25);
+  }, []);
 
   const toggleMeditationStatus = async () => {
     if (secondsRemaining === 0) setSecondsRemaining(25);
@@ -86,7 +92,10 @@ const MeditatePractice = () => {
           {/* Back Button */}
           <Pressable
             className="absolute top-12 left-5 z-10"
-            onPress={() => router.back()}
+            onPress={() => {
+              router.back();
+              setSecondsRemaining(25);
+            }}
           >
             <Ionicons
               name="chevron-back-circle-outline"
@@ -106,7 +115,7 @@ const MeditatePractice = () => {
           </View>
           <View className="mb-12 mx-5">
             <CustomButton
-              title="Start Meditation"
+              title={meditating ? "Stop" : "Start Meditation"}
               onPress={toggleMeditationStatus}
             />
           </View>

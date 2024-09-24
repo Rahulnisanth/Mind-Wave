@@ -23,6 +23,7 @@ const TabsLayout = () => {
         name="nature-meditate"
         options={{
           tabBarLabel: "Meditation",
+          tabBarLabelStyle: { fontFamily: "Montserrat-Regular" },
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons
               name="flower-tulip"
@@ -37,6 +38,7 @@ const TabsLayout = () => {
         name="affirmations"
         options={{
           tabBarLabel: "Affirmations",
+          tabBarLabelStyle: { fontFamily: "Montserrat-Regular" },
           tabBarIcon: ({ color }) => (
             <Ionicons name="book" size={26} color={color} />
           ),
