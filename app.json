@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "mind-wave",
+    "name": "Mind Wave",
     "slug": "mind-wave",
+    "description": "A minimalist meditation app to help users relax, focus, and practice mindfulness through guided meditation and affirmations.",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/app_icon.png",
