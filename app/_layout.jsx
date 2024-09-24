@@ -18,6 +18,10 @@ export default function RootLayout() {
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       <Stack.Screen name="index" options={{ headerShown: false }} />
       <Stack.Screen name="meditate/[id]" options={{ headerShown: false }} />
+      <Stack.Screen
+        name="(modal)/adjust-duration"
+        options={{ headerShown: false, presentation: "modal" }}
+      />
     </Stack>
   );
 }
