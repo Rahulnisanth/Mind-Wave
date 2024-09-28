@@ -2,6 +2,7 @@ import React from "react";
 import { Tabs } from "expo-router";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import FontAwesome from "@expo/vector-icons/FontAwesome";
 
 const TabsLayout = () => {
   return (
@@ -33,7 +34,6 @@ const TabsLayout = () => {
           ),
         }}
       />
-
       <Tabs.Screen
         name="affirmations"
         options={{
@@ -41,6 +41,17 @@ const TabsLayout = () => {
           tabBarLabelStyle: { fontFamily: "Montserrat-Regular" },
           tabBarIcon: ({ color }) => (
             <Ionicons name="book" size={26} color={color} />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
+        name="profile"
+        options={{
+          tabBarLabel: "Profile",
+          tabBarLabelStyle: { fontFamily: "Montserrat-Regular" },
+          tabBarIcon: ({ color }) => (
+            <FontAwesome name="user" size={26} color={color} />
           ),
         }}
       />

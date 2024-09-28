@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { Audio } from "expo-av";
 import { MEDITATION_DATA, AUDIO_FILES } from "@/constants/Meditation-Data";
 import { useDuration } from "../../stores/durationStore";
+import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 
 const MeditatePractice = () => {
   const { id } = useLocalSearchParams();
@@ -109,6 +110,12 @@ const MeditatePractice = () => {
                 {formattedTimeMinutes}:{formattedTimeSeconds}
               </Text>
             </View>
+          </View>
+          <View className="flex-row gap-2 justify-center">
+            <FontAwesome6 name="headphones-simple" size={18} color="white" />
+            <Text className="text-white mb-5 text-center font-rmontb">
+              Use earphones for better experience
+            </Text>
           </View>
           <View className="mb-5 mx-5">
             <CustomButton title="Adjust Duration" onPress={handleDuration} />
