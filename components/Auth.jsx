@@ -1,12 +1,9 @@
 import React, { useState } from "react";
-import { Alert, StyleSheet, View, AppState } from "react-native";
+import { Alert, View, AppState } from "react-native";
 import { supabase } from "../lib/supabase";
-import { Button, Input } from "@rneui/themed";
+import { Input } from "@rneui/themed";
+import CustomButton from "../components/CustomButton";
 
-// Tells Supabase Auth to continuously refresh the session automatically if
-// the app is in the foreground. When this is added, you will continue to receive
-// `onAuthStateChange` events with the `TOKEN_REFRESHED` or `SIGNED_OUT` event
-// if the user's session is terminated. This should only be registered once.
 AppState.addEventListener("change", (state) => {
   if (state === "active") {
     supabase.auth.startAutoRefresh();
@@ -48,57 +45,43 @@ export default function Auth() {
   }
 
   return (
-    <View style={styles.container}>
-      <View style={[styles.verticallySpaced, styles.mt20]}>
-        <Input
-          label="Email"
-          leftIcon={{ type: "font-awesome", name: "envelope" }}
-          onChangeText={(text) => setEmail(text)}
-          value={email}
-          placeholder="email@address.com"
-          autoCapitalize={"none"}
-        />
-      </View>
-      <View style={styles.verticallySpaced}>
-        <Input
-          label="Password"
-          leftIcon={{ type: "font-awesome", name: "lock" }}
-          onChangeText={(text) => setPassword(text)}
-          value={password}
-          secureTextEntry={true}
-          placeholder="Password"
-          autoCapitalize={"none"}
-        />
-      </View>
-      <View style={[styles.verticallySpaced, styles.mt20]}>
-        <Button
-          title="Sign in"
-          disabled={loading}
-          onPress={() => signInWithEmail()}
-        />
-      </View>
-      <View style={styles.verticallySpaced}>
-        <Button
-          title="Sign up"
-          disabled={loading}
-          onPress={() => signUpWithEmail()}
-        />
+    <View className="py-10">
+      {/* Authentication form */}
+      <View>
+        <View>
+          <Input
+            style={{ color: "white", fontFamily: "Montserrat-Regular" }}
+            className="text-white font-medium bg-gray-800 rounded-lg px-4 py-2"
+            label="Email"
+            placeholder="email@address.com"
+            placeholderTextColor="gray"
+            onChangeText={(text) => setEmail(text)}
+            value={email}
+            disabled={loading}
+            autoCapitalize="none"
+          />
+        </View>
+        <View>
+          <Input
+            style={{ color: "white", fontFamily: "Montserrat-Regular" }}
+            className="text-white font-medium bg-gray-800 rounded-lg px-4 py-2"
+            label="Password"
+            placeholder="Password"
+            placeholderTextColor="gray"
+            secureTextEntry={true}
+            onChangeText={(text) => setPassword(text)}
+            value={password}
+            disabled={loading}
+            autoCapitalize="none"
+          />
+        </View>
+        <View className="mb-4">
+          <CustomButton title="Sign in" onPress={() => signInWithEmail()} />
+        </View>
+        <View className="mb-4">
+          <CustomButton title="Sign up" onPress={() => signUpWithEmail()} />
+        </View>
       </View>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    marginTop: 40,
-    padding: 12,
-  },
-  verticallySpaced: {
-    paddingTop: 4,
-    paddingBottom: 4,
-    alignSelf: "stretch",
-  },
-  mt20: {
-    marginTop: 20,
-  },
-});
