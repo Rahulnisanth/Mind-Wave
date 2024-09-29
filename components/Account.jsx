@@ -119,7 +119,7 @@ export default function Account({ session }) {
             </View>
             <View className="my-3">
               <Text className="text-white font-rmontb text-3xl tracking-wider">
-                {username}
+                {username ? username : "Loading..."}
               </Text>
             </View>
             <View className="flex-row gap-4 items-center">
@@ -150,7 +150,7 @@ export default function Account({ session }) {
           </SafeAreaView>
         </AppGradient>
       </ImageBackground>
-      {/* Contents below the profile widget */}
+      {/* User Affirmations Widget */}
       <View className="flex-1 bg-[#202124]">
         <ScrollView className="px-5">
           <View>

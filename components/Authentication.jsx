@@ -12,7 +12,7 @@ AppState.addEventListener("change", (state) => {
   }
 });
 
-export default function Auth() {
+export default function Authentication() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
@@ -36,11 +36,11 @@ export default function Auth() {
     } = await supabase.auth.signUp({
       email: email,
       password: password,
+      email_verification: false,
     });
 
     if (error) Alert.alert(error.message);
-    if (!session)
-      Alert.alert("Please check your inbox for email verification!");
+    if (!session) Alert.alert("Error ocurred in signup!");
     setLoading(false);
   }
 

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { supabase } from "../../../lib/supabase";
-import Auth from "../../../components/Auth";
 import Account from "../../../components/Account";
+import Authentication from "../../../components/Authentication";
 import { View, Text } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
@@ -27,7 +27,7 @@ export default function Profile() {
         {session && session.user ? (
           <Account key={session.user.id} session={session} />
         ) : (
-          <Auth />
+          <Authentication />
         )}
       </View>
       <StatusBar style="light" />
