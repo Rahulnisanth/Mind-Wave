@@ -2,11 +2,17 @@ import { useState } from "react";
 import { supabase } from "../lib/supabase";
 import { StyleSheet, View, Alert } from "react-native";
 import { Button, Input } from "@rneui/themed";
+import Avatar from "./Avatar";
 
-const UpdateProfile = ({ setIsUpdating, session, username, avatarUrl }) => {
+const UpdateProfile = ({
+  setIsUpdating,
+  session,
+  username,
+  avatarUrl,
+  setAvatarUrl,
+}) => {
   const [loading, setLoading] = useState(false);
   const [newUsername, setNewUsername] = useState(username);
-  const [newAvatarUrl, setNewAvatarUrl] = useState(avatarUrl);
 
   async function updateProfile({ username, avatar_url }) {
     try {
@@ -37,6 +43,15 @@ const UpdateProfile = ({ setIsUpdating, session, username, avatarUrl }) => {
   }
   return (
     <View style={styles.container}>
+      <View>
+        <Avatar
+          size={200}
+          url={avatarUrl}
+          onUpload={(url) => {
+            setAvatarUrl(url);
+          }}
+        />
+      </View>
       <View style={[styles.verticallySpaced, styles.mt20]}>
         <Input
           style={{ color: "white", fontFamily: "Montserrat-Regular" }}
@@ -58,7 +73,7 @@ const UpdateProfile = ({ setIsUpdating, session, username, avatarUrl }) => {
         <Button
           title={loading ? "Loading ..." : "Update"}
           onPress={() =>
-            updateProfile({ username: newUsername, avatar_url: newAvatarUrl })
+            updateProfile({ username: newUsername, avatar_url: avatarUrl })
           }
           disabled={loading}
         />

@@ -45,7 +45,7 @@ export default function Auth() {
   }
 
   return (
-    <View className="py-10">
+    <View className="py-10 px-4">
       {/* Authentication form */}
       <View>
         <View>

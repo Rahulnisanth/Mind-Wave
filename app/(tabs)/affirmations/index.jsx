@@ -6,7 +6,7 @@ import GuidedAffirmationsGallery from "../../../components/GuidedAffirmationsGal
 const Affirmations = () => {
   return (
     <View className="h-full flex-1 bg-[#202124]">
-      <ScrollView className="px-5 py-12" showsVerticalScrollIndicator={false}>
+      <ScrollView className="px-5 py-12" >
         <Text className="text-3xl font-rmontb text-white">
           Change your beliefs with affirmations
         </Text>
@@ -14,8 +14,8 @@ const Affirmations = () => {
           {AFFIRMATION_GALLERY.map((item) => (
             <GuidedAffirmationsGallery
               title={item.title}
-              key={item.title}
               previews={item.data}
+              key={item.title}
             />
           ))}
         </View>

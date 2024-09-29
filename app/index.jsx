@@ -41,7 +41,6 @@ export default function HomeScreen() {
                   title="Get Started"
                 />
               </View>
-
               <StatusBar style="light" />
             </SafeAreaView>
           </SafeAreaView>

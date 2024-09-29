@@ -18,10 +18,10 @@ export default function Profile() {
   }, []);
 
   return (
-    <View className="h-full flex-1 bg-[#202124]">
-      <View className="px-5 py-12">
-        <Text className="text-3xl font-rmontb text-white">Profile</Text>
-        <Text className="text-lg font-rmonto text-white">
+    <View className="flex-1 bg-[#202124]">
+      <View className="flex-1 pt-12">
+        <Text className="px-5 text-3xl font-rmontb text-white">Profile</Text>
+        <Text className="px-5 text-lg font-rmonto text-white">
           Customize your meditations here
         </Text>
         {session && session.user ? (
