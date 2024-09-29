@@ -98,7 +98,7 @@ export default function Account({ session }) {
         className="h-[272px] rounded-t-3xl"
       >
         <AppGradient
-          colors={["transparent", "rgba(0, 0, 0, 0.3)"]}
+          colors={["transparent", "rgba(0, 0, 0, 0.7)"]}
           className="flex-1 justify-center items-center"
         >
           <SafeAreaView className="px-4 -mt-2">
@@ -125,8 +125,8 @@ export default function Account({ session }) {
             <View className="flex-row gap-4 items-center">
               <View>
                 <Pressable onPress={() => supabase.auth.signOut()}>
-                  <MaterialCommunityIcons
-                    name="chevron-left-circle"
+                  <MaterialIcons
+                    name="arrow-circle-left"
                     size={40}
                     color="white"
                   />
