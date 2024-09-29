@@ -13,7 +13,7 @@ const AdjustDuration = () => {
   };
   return (
     <View className="h-full flex-1 bg-[#202124]">
-      <SafeAreaView className="py-5 px-5">
+      <SafeAreaView className="py-5 px-4">
         {/* Back Button */}
         <Pressable
           className="absolute top-12 left-5 z-10"

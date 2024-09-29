@@ -20,8 +20,8 @@ export default function Profile() {
   return (
     <View className="flex-1 bg-[#202124]">
       <View className="flex-1 pt-12">
-        <Text className="px-5 text-3xl font-rmontb text-white">Profile</Text>
-        <Text className="px-5 text-lg font-rmonto text-white">
+        <Text className="px-4 text-3xl font-rmontb text-white">Profile</Text>
+        <Text className="px-4 text-lg font-rmonto text-white">
           Customize your meditations here
         </Text>
         {session && session.user ? (

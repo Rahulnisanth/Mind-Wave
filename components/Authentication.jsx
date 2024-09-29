@@ -1,8 +1,19 @@
 import React, { useState } from "react";
-import { Alert, View, AppState } from "react-native";
+import {
+  Alert,
+  View,
+  AppState,
+  ImageBackground,
+  SafeAreaView,
+  Image,
+} from "react-native";
+import backgroundImage from "../assets/affirmation-images/night-sky-4.webp";
+import AppLogo from "../assets/indexMeditationLogo.png";
+import AppGradient from "./AppGradient";
 import { supabase } from "../lib/supabase";
 import { Input } from "@rneui/themed";
 import CustomButton from "../components/CustomButton";
+import { StatusBar } from "expo-status-bar";
 
 AppState.addEventListener("change", (state) => {
   if (state === "active") {
@@ -45,43 +56,62 @@ export default function Authentication() {
   }
 
   return (
-    <View className="py-10 px-4">
+    <View className="flex-1 mt-4 rounded-t-3xl overflow-hidden">
+      {/* Profile Widget */}
+      <ImageBackground
+        source={backgroundImage}
+        resizeMode="cover"
+        className="h-[272px] rounded-t-3xl"
+      >
+        <AppGradient
+          colors={["transparent", "rgba(0, 0, 0, 0.7)"]}
+          className="flex-1 justify-center items-center"
+        >
+          <SafeAreaView className="flex-1 justify-center items-center">
+            {/* App Logo */}
+            <Image source={AppLogo} className="h-52 w-52" />
+          </SafeAreaView>
+        </AppGradient>
+      </ImageBackground>
       {/* Authentication form */}
-      <View>
+      <View className="py-5 px-4">
         <View>
-          <Input
-            style={{ color: "white", fontFamily: "Montserrat-Regular" }}
-            className="text-white font-medium bg-gray-800 rounded-lg px-4 py-2"
-            label="Email"
-            placeholder="email@address.com"
-            placeholderTextColor="gray"
-            onChangeText={(text) => setEmail(text)}
-            value={email}
-            disabled={loading}
-            autoCapitalize="none"
-          />
-        </View>
-        <View>
-          <Input
-            style={{ color: "white", fontFamily: "Montserrat-Regular" }}
-            className="text-white font-medium bg-gray-800 rounded-lg px-4 py-2"
-            label="Password"
-            placeholder="Password"
-            placeholderTextColor="gray"
-            secureTextEntry={true}
-            onChangeText={(text) => setPassword(text)}
-            value={password}
-            disabled={loading}
-            autoCapitalize="none"
-          />
-        </View>
-        <View className="mb-4">
-          <CustomButton title="Sign in" onPress={() => signInWithEmail()} />
-        </View>
-        <View className="mb-4">
-          <CustomButton title="Sign up" onPress={() => signUpWithEmail()} />
+          <View>
+            <Input
+              style={{ color: "white", fontFamily: "Montserrat-Regular" }}
+              className="text-white font-medium bg-gray-800 rounded-lg px-4 py-2"
+              label="Email"
+              placeholder="email@address.com"
+              placeholderTextColor="gray"
+              onChangeText={(text) => setEmail(text)}
+              value={email}
+              disabled={loading}
+              autoCapitalize="none"
+            />
+          </View>
+          <View>
+            <Input
+              style={{ color: "white", fontFamily: "Montserrat-Regular" }}
+              className="text-white font-medium bg-gray-800 rounded-lg px-4 py-2"
+              label="Password"
+              placeholder="Password"
+              placeholderTextColor="gray"
+              secureTextEntry={true}
+              onChangeText={(text) => setPassword(text)}
+              value={password}
+              disabled={loading}
+              autoCapitalize="none"
+            />
+          </View>
+          <View className="mb-4">
+            <CustomButton title="Sign in" onPress={() => signInWithEmail()} />
+          </View>
+          <View className="mb-4">
+            <CustomButton title="Sign up" onPress={() => signUpWithEmail()} />
+          </View>
         </View>
       </View>
+      <StatusBar style="light" />
     </View>
   );
 }

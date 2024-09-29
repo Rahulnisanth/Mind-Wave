@@ -6,7 +6,7 @@ import GuidedAffirmationsGallery from "../../../components/GuidedAffirmationsGal
 const Affirmations = () => {
   return (
     <View className="h-full flex-1 bg-[#202124]">
-      <ScrollView className="px-5 py-12" >
+      <ScrollView className="px-4 py-12">
         <Text className="text-3xl font-rmontb text-white">
           Change your beliefs with affirmations
         </Text>

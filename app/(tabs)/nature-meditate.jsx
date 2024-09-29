@@ -15,7 +15,7 @@ import { router } from "expo-router";
 const NatureMeditate = () => {
   return (
     <View className="h-full flex-1 bg-[#202124]">
-      <SafeAreaView className="px-5 py-5">
+      <SafeAreaView className="px-4 py-5">
         <View className="mt-7 mb-3">
           <Text className="text-3xl font-rmontb text-white">Welcome</Text>
           <Text className="text-lg font-rmonto text-white">

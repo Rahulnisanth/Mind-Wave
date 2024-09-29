@@ -101,7 +101,7 @@ export default function Account({ session }) {
           colors={["transparent", "rgba(0, 0, 0, 0.3)"]}
           className="flex-1 justify-center items-center"
         >
-          <SafeAreaView className="px-5 -mt-2">
+          <SafeAreaView className="px-4 -mt-2">
             <View className="w-32 h-32 overflow-hidden rounded-2xl border-2 border-white">
               {avatarUrl ? (
                 <Image
@@ -152,7 +152,7 @@ export default function Account({ session }) {
       </ImageBackground>
       {/* User Affirmations Widget */}
       <View className="flex-1 bg-[#202124]">
-        <ScrollView className="px-5">
+        <ScrollView className="px-4">
           <View>
             <CustomizedAffirmations />
           </View>
