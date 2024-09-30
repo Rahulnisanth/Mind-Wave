@@ -1,4 +1,4 @@
-import backgroundImage from "../assets/affirmation-images/night-sky-4.webp";
+import backgroundImage from "../assets/meditation-images/beach.webp";
 import defaultProfileImage from "../assets/affirmation-images/mountain-meditate-4.webp";
 import { useState, useEffect } from "react";
 import { supabase } from "../lib/supabase";
@@ -98,7 +98,7 @@ export default function Account({ session }) {
         className="h-[272px] rounded-t-3xl"
       >
         <AppGradient
-          colors={["transparent", "rgba(0, 0, 0, 0.7)"]}
+          colors={["transparent", "rgba(0, 0, 0, 0.9)"]}
           className="flex-1 justify-center items-center"
         >
           <SafeAreaView className="px-4 -mt-2">

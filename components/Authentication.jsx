@@ -1,19 +1,22 @@
 import React, { useState } from "react";
 import {
   Alert,
+  Text,
   View,
   AppState,
   ImageBackground,
   SafeAreaView,
+  TouchableOpacity,
   Image,
 } from "react-native";
-import backgroundImage from "../assets/affirmation-images/night-sky-4.webp";
+import backgroundImage from "../assets/meditation-images/beach.webp";
 import AppLogo from "../assets/indexMeditationLogo.png";
 import AppGradient from "./AppGradient";
 import { supabase } from "../lib/supabase";
 import { Input } from "@rneui/themed";
 import CustomButton from "../components/CustomButton";
 import { StatusBar } from "expo-status-bar";
+import AntDesign from "@expo/vector-icons/AntDesign";
 
 AppState.addEventListener("change", (state) => {
   if (state === "active") {
@@ -64,7 +67,7 @@ export default function Authentication() {
         className="h-[272px] rounded-t-3xl"
       >
         <AppGradient
-          colors={["transparent", "rgba(0, 0, 0, 0.7)"]}
+          colors={["transparent", "rgba(0, 0, 0, 0.9)"]}
           className="flex-1 justify-center items-center"
         >
           <SafeAreaView className="flex-1 justify-center items-center">
@@ -80,7 +83,6 @@ export default function Authentication() {
             <Input
               style={{ color: "white", fontFamily: "Montserrat-Regular" }}
               className="text-white font-medium bg-gray-800 rounded-lg px-4 py-2"
-              label="Email"
               placeholder="email@address.com"
               placeholderTextColor="gray"
               onChangeText={(text) => setEmail(text)}
@@ -93,7 +95,6 @@ export default function Authentication() {
             <Input
               style={{ color: "white", fontFamily: "Montserrat-Regular" }}
               className="text-white font-medium bg-gray-800 rounded-lg px-4 py-2"
-              label="Password"
               placeholder="Password"
               placeholderTextColor="gray"
               secureTextEntry={true}
@@ -103,10 +104,17 @@ export default function Authentication() {
               autoCapitalize="none"
             />
           </View>
-          <View className="mb-4">
-            <CustomButton title="Sign in" onPress={() => signInWithEmail()} />
+          <View className="my-4">
+            <TouchableOpacity
+              activeOpacity={0.7}
+              onPress={() => signInWithEmail()}
+              className="bg-white flex-row gap-2 rounded-xl h-[62px] justify-center items-center"
+            >
+              <AntDesign name="login" size={22} color="black" />
+              <Text className="text-lg font-rmontb">Sign in</Text>
+            </TouchableOpacity>
           </View>
-          <View className="mb-4">
+          <View className="my-4">
             <CustomButton title="Sign up" onPress={() => signUpWithEmail()} />
           </View>
         </View>
